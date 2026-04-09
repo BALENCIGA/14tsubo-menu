@@ -1,0 +1,7 @@
+.DS_Store
+*.heic
+*.env
+*.key
+*.pem
+service_account.json
+node_modules/

@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>イッテンヨンツボ — 限定アードベッグ コレクション</title>
+<meta name="description" content="ARdbEG & Fruit Cocktail イッテンヨンツボ。1.4坪のスモールバーが誇るレア・アードベッグの数々。">
+<meta property="og:title" content="イッテンヨンツボ — Ardbeg Collection">
+<meta property="og:image" content="assets/logo/logo.png">
+<meta name="theme-color" content="#0a0f0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#050805;
+    --bg-2:#0d130d;
+    --ink:#eaf5ea;
+    --ink-dim:#8fa790;
+    --neon:#3df58a;
+    --neon-soft:#2bc36b;
+    --line:rgba(61,245,138,.22);
+    --maxw:880px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:"Noto Serif JP","Cormorant Garamond",serif;-webkit-font-smoothing:antialiased}
+  html[data-lang="en"] body{font-family:"Noto Serif JP","Cormorant Garamond",serif}
+  html[data-lang="en"] h1.title,
+  html[data-lang="en"] .cat-head h2,
+  html[data-lang="en"] .card-name,
+  html[data-lang="en"] .price{font-family:"Noto Serif JP","Cormorant Garamond",serif}
+  a{color:var(--neon);text-decoration:none}
+  body{background-image:radial-gradient(ellipse at top,rgba(61,245,138,.06),transparent 60%)}
+  img{max-width:100%;display:block}
+
+  /* lang toggle */
+  .lang-bar{position:sticky;top:0;z-index:10;display:flex;justify-content:flex-end;gap:8px;padding:14px 18px;background:linear-gradient(to bottom,rgba(11,11,12,.95),rgba(11,11,12,.6));backdrop-filter:blur(6px)}
+  .lang-bar button{background:transparent;border:1px solid var(--line);color:var(--ink-dim);padding:6px 14px;font:inherit;font-size:13px;letter-spacing:.1em;cursor:pointer;border-radius:2px;transition:.2s}
+  .lang-bar button.active{background:var(--neon);color:#000;border-color:var(--neon);box-shadow:0 0 12px rgba(61,245,138,.5)}
+  .lang-bar button:hover{color:var(--ink)}
+
+  /* hero */
+  header.hero{max-width:var(--maxw);margin:0 auto;padding:40px 24px 24px;text-align:center;border-bottom:1px solid var(--line)}
+  .logo-slot{min-height:80px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+  .logo-slot img{max-width:min(420px,80vw);width:100%;height:auto;filter:drop-shadow(0 0 24px rgba(61,245,138,.25))}
+  h1.title{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(28px,5vw,42px);margin:0 0 6px;letter-spacing:.04em;color:var(--neon);text-shadow:0 0 16px rgba(61,245,138,.4)}
+  .subtitle{color:var(--ink-dim);font-size:11px;letter-spacing:.3em;text-transform:uppercase;margin:0 0 18px}
+  .lede{max-width:560px;margin:18px auto 0;color:var(--ink-dim);font-size:14px;line-height:1.85}
+  .lede [lang="en"]{display:none}
+  html[data-lang="en"] .lede [lang="ja"]{display:none}
+  html[data-lang="en"] .lede [lang="en"]{display:block}
+
+  /* section */
+  section.cat{max-width:var(--maxw);margin:0 auto;padding:48px 24px 8px}
+  .cat-head{display:flex;align-items:baseline;gap:14px;margin-bottom:24px;border-bottom:1px solid var(--line);padding-bottom:10px}
+  .cat-head .icon{font-size:22px}
+  .cat-head h2{margin:0;font-family:"Cormorant Garamond",serif;font-size:clamp(22px,3.5vw,30px);font-weight:600;letter-spacing:.05em;color:var(--neon)}
+  .cat-head .en{color:var(--ink-dim);font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-left:auto}
+
+  .group-photo{margin:8px 0 28px;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+  .group-photo img{filter:brightness(.85) contrast(1.05)}
+
+  /* card */
+  .card{padding:22px 0;border-bottom:1px dashed var(--line);display:flex;gap:20px;align-items:flex-start}
+  .card:last-child{border-bottom:none}
+  .card-img{flex:0 0 80px;width:80px}
+  .card-img img{width:80px;height:auto;border-radius:2px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))}
+  .card-body{flex:1;min-width:0}
+  .card-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:6px}
+  @media(max-width:480px){.card-img{flex:0 0 60px;width:60px}.card-img img{width:60px}}
+  .card-name{font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:600;color:var(--ink);letter-spacing:.02em;line-height:1.2}
+  .card-name .ja{display:block;font-family:"Noto Serif JP",serif;font-size:13px;color:var(--ink-dim);font-weight:400;margin-top:4px;letter-spacing:.05em}
+  .price{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:600;color:var(--neon);white-space:nowrap;text-shadow:0 0 8px rgba(61,245,138,.3)}
+  .price small{font-size:11px;color:var(--ink-dim);font-weight:400;margin-left:2px}
+  .meta{font-size:11px;color:var(--ink-dim);letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
+  .desc{font-size:14px;line-height:1.85;color:var(--ink-dim)}
+  .desc [lang="en"]{display:none}
+  html[data-lang="en"] .desc [lang="ja"]{display:none}
+  html[data-lang="en"] .desc [lang="en"]{display:block}
+
+  /* footer */
+  footer{max-width:var(--maxw);margin:60px auto 0;padding:40px 24px 60px;text-align:center;border-top:1px solid var(--line);color:var(--ink-dim);font-size:12px;line-height:1.9;letter-spacing:.05em}
+  footer .info{margin-bottom:16px}
+  footer .info strong{color:var(--ink);font-size:14px;letter-spacing:.1em;display:block;margin-bottom:6px}
+  footer .copy{font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-top:24px}
+
+  /* misc */
+  .note{font-size:11px;color:var(--ink-dim);text-align:center;margin-top:14px;letter-spacing:.05em}
+  .note [lang="en"]{display:none}
+  html[data-lang="en"] .note [lang="ja"]{display:none}
+  html[data-lang="en"] .note [lang="en"]{display:block}
+</style>
+</head>
+<body>
+
+<div class="lang-bar">
+  <button id="btn-ja" class="active" onclick="setLang('ja')">日本語</button>
+  <button id="btn-en" onclick="setLang('en')">English</button>
+</div>
+
+<header class="hero">
+  <div class="logo-slot">
+    <img src="assets/logo/logo.png" alt="ARdbEG & Fruit Cocktail イッテンヨンツボ">
+  </div>
+  <p class="subtitle">Limited Ardbeg Collection</p>
+  <h1 class="title">限定アードベッグ コレクション</h1>
+  <p class="lede">
+    <span lang="ja">1.4坪のスモールバー「イッテンヨンツボ」が誇る、レア・アードベッグの全ラインナップ。コミッティリリース、アンソロジーシリーズ、アードベッグ・デー限定——アイラの雄が放つ全17銘柄をお楽しみください。</span>
+    <span lang="en">The complete rare Ardbeg lineup at "Itten-Yon-Tsubo" (1.4-tsubo / ≈4.6㎡), a tiny bar specialising in Islay's most peated single malt. Committee Releases, the Anthology series and Ardbeg Day editions — 17 bottles to explore.</span>
+  </p>
+</header>
+
+<!-- ============ CORE ============ -->
+<section class="cat">
+  <div class="cat-head"><span class="icon">🏛</span><h2>コア</h2><span class="en">Core Range</span></div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Ardbeg Ten Years Old Cask Strength<span class="ja">アードベッグ 10年 カスクストレングス</span></div>
+        <div class="price">¥2,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">61.7% · 10yo · Cask Strength · Non-Chill Filtered</div>
+      <div class="desc">
+        <span lang="ja">香り高く、重厚でスモーキーかつスパイシー。クリーミーなトフィーに、タールやコーヒーかす、潮風のニュアンスが重なる奥行きのあるアロマ。加水でバニラやライムの軽やかさが立ち上がり、フェンネルや焚火の残り火のアードベッグらしい香りが際立つ。味わいは力強く厚みのある口当たり——燻製シナモン＆スパイスの甘味、煤、タール、ピートモス、薪の煙の濃密なスモーク。背景にモルト由来のやさしい甘みとビスケットの風味。余韻はメントールの清涼感、ユーカリを思わせる爽やかさが長く続く。</span>
+        <span lang="en">Rich, heavy, smoky and spicy. Creamy toffee layered with tar, coffee grounds and sea breeze; add water for vanilla, lime, fennel and bonfire embers. Palate: powerful and full-bodied — smoked cinnamon &amp; spice sweetness, soot, tar, peat moss and woodsmoke. Gentle malt sweetness and biscuit in the background. Finish: menthol-like freshness, eucalyptus-tinged aftertaste that lingers long.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMITTEE ============ -->
+<section class="cat">
+  <div class="cat-head"><span class="icon">🎟</span><h2>コミッティリリース</h2><span class="en">Committee Releases</span></div>
+  <div class="group-photo"><img src="assets/bottles/IMG_1684.jpg" alt="Ardbeg Committee bottles A"></div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Smokiverse <span class="ja">スモーキヴァース (2025)</span></div>
+        <div class="price">¥2,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">48.3% · Ardbeg Day 2025 · High Gravity Mash</div>
+      <div class="desc">
+        <span lang="ja">刺激的で、オイリーでスパイシー。濃厚な糖蜜の香りが包み込むクレオソートとスモークされたハーブ、トーストされたりんごとレーズンの甘い香り。加水でユーカリとメントールが勢いよく現れ、フェンネルとパインが続く。味わいは驚くほどバランスが取れ、ジリジリとした口当たりからピートスモーク、粗挽きコーヒー、カラントへ。甘いレモンバルサムがスモークされたマンダリンと絡み合い、鋭くスモーキーで刺激的な味わいが続く。余韻は長く蛇行するように、バニラとスモークバターの繊細な香りを運んでくる。</span>
+        <span lang="en">Pungent, oily and spicy. Rich molasses wraps around creosote and smoked herbs, with toasted apple and raisin sweetness beneath. Add water for eucalyptus and menthol surging forward, followed by fennel and pine. Palate: remarkably balanced — a sizzling mouthfeel shifts to peat smoke, coarse-ground coffee and currants. Sweet lemon balm entwines with smoked mandarin, followed by a sharp, smoky, pungent intensity. Finish: long and meandering, carrying delicate vanilla and smoked butter.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Grooves <span class="ja">グルーヴス (2018)</span></div>
+        <div class="price">¥4,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">51.6% · Committee 2018 · Cask Strength · Grooved Wine Casks</div>
+      <div class="desc">
+        <span lang="ja">アードベッグ史上最もグルーヴィーな樽で造られた、強烈にメロウな一杯。スモークシナモン＆パプリカ、アンティークレザー、サドルソープ、松脂、タール、潮しぶき。加水でラベンダーソープ、白胡椒、コリアンダー＆ミント。味わいは力強い塩気からトリークルトフィー、バニラポップコーン、塩漬けピーチ、スモーキーBBQ——スモークドペア＆アップルのヘイズへ。余韻はスモークパプリカと焚き火のメロウな甘さ。</span>
+        <span lang="en">An intensely mellow dram from the grooviest casks ever. Nose: smoked cinnamon &amp; paprika, antique leather, saddle soap, pine resin, tar, briny sea spray; add water for lavender soap, white pepper, coriander &amp; mint. Palate: powerfully salty, drifting into treacle toffee, vanilla popcorn, salted peaches, smoky BBQ — fading into a haze of smoked pears &amp; apples. Finish: smoked paprika, bonfires and mellow sweetness.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Drum <span class="ja">ドラム (2019)</span></div>
+        <div class="price">¥3,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">52% · Committee 2019 · Cask Strength · Rum Cask Finish</div>
+      <div class="desc">
+        <span lang="ja">バーボン樽で熟成したアードベッグをアメリカ産エクス・ラム樽でレスティング。芳しい松脂、薪煙、潮しぶきが熟したバナナ＆パイナップルと絶妙なパラディドル（連打）で踊る。ラベンダー、リコリス、バニラがリッチなダークチョコレートへと揺れ動き、長くスモーキーなフィニッシュへとパレードしていく。</span>
+        <span lang="en">Ardbeg from ex-bourbon casks rested in ex-rum casks from the Americas. Fragrant pine resin, woodsmoke and sea spray dance alongside ripe banana and pineapple in a wondrous paradiddle of aromas. Lavender, liquorice and vanilla sway into rich dark chocolate, before parading into a long, smoky finish.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Scorch <span class="ja">スコーチ (2021)</span></div>
+        <div class="price">¥2,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">51.7% · Committee 2021 · Cask Strength · Alligator Char</div>
+      <div class="desc">
+        <span lang="ja">ダンネージ第3倉庫に棲むというアードベッグの火を吐くドラゴンの伝説から生まれた、壮大なスケールの一杯。最も強烈にチャーしたエクス・バーボン樽で熟成。煤と煙の強烈なアロマが待ち構え、グリル料理とブラックリコリスが大胆な薬用トローチの風味と絡み合う。まさにファンタスティカルなプロポーションのドラム。</span>
+        <span lang="en">A dram of fantastical proportions, born from the tale of Ardbeg's flavour-breathing dragon dwelling in Dunnage Warehouse 3. Matured in our most heavily charred ex-bourbon casks. Intense aromas of soot and smoke lie in wait, while grilled fare and black liquorice mingle with bold notes of antiseptic lozenge. Truly fantastical.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="group-photo"><img src="assets/bottles/IMG_1686.jpg" alt="Ardbeg Committee bottles B"></div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Blaaack <span class="ja">ブラック (2020 / 20周年)</span></div>
+        <div class="price">¥3,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">50.7% · Committee 20th Anniversary 2020 · Cask Strength · NZ Pinot Noir Casks</div>
+      <div class="desc">
+        <span lang="ja">アイラの白壁の中にひときわ異彩を放つ黒い羊——アードベッグ。その忠実なる群れ「アードベギャン」に捧げるコミッティ20周年記念ボトル。ニュージーランド産最高級ピノノワール・ワイン樽で熟成。ヴェルヴェットのようなサマーフルーツプディングとビターチェリーが、煤とアードベッグの真骨頂であるスモークのダークなエッジと編み合わさる。まさに唯一無二のウイスキー。</span>
+        <span lang="en">Among Islay's whitewashed walls stands a black sheep — Ardbeg. This whisky celebrates our dyed-in-the-wool Ardbeggian flock. The finest Pinot Noir wine casks from New Zealand mature a celebratory dram that knits together velvety summer fruit pudding and bitter cherry, with a darker edge of soot and Ardbeg's hallmark smoke. Truly a whisky apart.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Kelpie <span class="ja">ケルピー (2017)</span></div>
+        <div class="price">¥2,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">46% · 2017 Limited · Non-Chill Filtered · Black Sea Virgin Oak</div>
+      <div class="desc">
+        <span lang="ja">力強いオイリーなピートの香り、ダークチョコレート、燻製魚、かすかな海草、シャープなハーブが絡まり合い、黒胡椒の香りが波のように押し寄せる。味わいは胡椒が口の中で広がり、蜂蜜のトフィー、トルココーヒー、燻製ベーコン、ダークチョコレートが存在感を強める。桃のような果実味、ヒッコリーウッド、クローヴ油、黒オリーブが続く。余韻はクローヴやタール、豊かなトフィーが深く、深く、続く。</span>
+        <span lang="en">Powerful oily peat, dark chocolate, smoked fish, subtle seaweed and sharp herbs intertwine on the nose, with waves of black pepper crashing in. Palate: pepper spreads across the mouth, then honey toffee, Turkish coffee, smoked bacon and rich dark chocolate build in presence. Peach-like fruit, hickory wood, clove oil and a hint of black olive follow. Finish: clove, tar and rich toffee linger deep, deep, and deeper still.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Dark Cove <span class="ja">ダーク・コーヴ (2016)</span></div>
+        <div class="price">¥4,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">55% · Committee 2016 · Cask Strength · Dark Sherry Casks</div>
+      <div class="desc">
+        <span lang="ja">史上最もダークなアードベッグ。このウイスキーをしっかり隠しておけ——その心臓部はダークシェリー樽で熟成され、トリークルトフィー、コールタール、イカスミ麺、焙煎コーヒーかすの波を押し寄せる。色合いは月明かりに照らされた銅のスチルのよう。香りはダークチョコ、リッチなトリークルトフィー、遠くの焚き火。バーボン樽熟成とダークシェリー樽の秘密の邂逅。胡椒のスパイスとゼスティなライムに誘われ、燻炭とウッドポリッシュが舌の上を走り、レーズン、デーツ、ジンジャーがタリー・クレオソートの影から現れる。燻製ハムとイカスミ麺の余韻が長くスパイシーなアフターテイストを告げる。</span>
+        <span lang="en">The darkest Ardbeg ever. Take this whisky and hide it well — its heart matured in dark sherry casks, imparting waves of treacle toffee, coal tar, squid ink noodles and toasted coffee grounds. Colour: copper stills in moonlight. Nose: dark chocolate, rich treacle toffee and distant bonfires — a clandestine meeting of ex-bourbon and dark sherry casks. Pepper spice and zesty lime lure you in. Smouldering charcoal and wood polish flit across the palate, with raisins, dates and ginger emerging from shadows of tarry creosote. Cured smoked ham and squid ink noodles signal a long, spicy aftertaste.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Heavy Vapours <span class="ja">ヘヴィー・ヴェイパーズ (2023)</span></div>
+        <div class="price">¥2,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">46% · Ardbeg Day 2023 · No Purifier · Untamed</div>
+      <div class="desc">
+        <span lang="ja">アードベッグ史上初、ピュリファイアー（精留器）を外して蒸留した"無敵のアードベッグ"。力強く刺激的なアロマ——農場の香り、クレオソート、タールを塗ったロープ。圧倒的なスモーク香の中に微かなダークチョコレートの甘さ。加水でダークチョコのクリームと燻製アーティチョーク。味わいはスパイシーで温かみのある口当たり——炭塵、カルダモン、ペパーミント、ユーカリ、ダークチョコ、コーヒーの粉。その裏にアニスツイスト、シナモンボール、薬用トローチのハードキャンディー。余韻は麻酔にかかったようなセンセーショナルで力強い残響がいつまでも続く。</span>
+        <span lang="en">The first Ardbeg distilled without the purifier — "the invincible Ardbeg." Nose: powerful, pungent — farmyard, creosote, tarred rope; overwhelming smoke with a whisper of dark chocolate. Add water for dark chocolate cream and smoked artichoke. Palate: spicy and warm — coal dust, cardamom, peppermint, eucalyptus, dark chocolate, coffee grounds; behind it, anise twist, cinnamon balls and medicinal hard candy. Finish: an anaesthetic, sensational, powerful aftertaste that goes on and on.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Ardcore <span class="ja">アードコア (2022)</span></div>
+        <div class="price">¥2,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">46% · 2022 Limited · Heavily Roasted Black Malt</div>
+      <div class="desc">
+        <span lang="ja">極限までローストしたブラックモルトで造られた、パンクなアードベッグ。このモルトこそが唯一無二の個性を決定づける。「トゲトゲのボールを噛んだような味」と評されるほどの衝撃。チャコールとスウィートスモークのインパクト抜群な香り、力強いアニスシードとダークチョコレート。心臓を袖に縫い付けて見せる——ただし、その心臓は真っ黒。最もアードコアなファンだけに捧げる一杯。</span>
+        <span lang="en">From a distillery with more ups and downs than a pogoing punk. Created with black malt roasted to the extreme — the malt defines its distinctive profile. Described as tasting like "biting on a spiky ball." Nose: charcoal and sweet smoke, right in your face. Palate: potent aniseed and dark chocolate stamp this out as one fit only for the most Ardcore of fans. It wears its heart on its sleeve… its black heart!</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="group-photo"><img src="assets/bottles/IMG_1688.jpg" alt="Ardbeg Committee bottles C"></div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">ARRRRRRDBEG! <span class="ja">アーーードベッグ (2021)</span></div>
+        <div class="price">¥4,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">51.8% · Committee 2021 · Cask Strength · 100% Ex-Rye Casks</div>
+      <div class="desc">
+        <span lang="ja">13年間蒸留所の舵を取った Mickey Heads を讃えて生まれた「時代の終わり」エディション。アードベッグ史上初、全量エクス・ライ樽のみで熟成。Mickeyへの最後の敬礼は、フルーティーな味わいのラッパ銃（ブランダーバス）。蒸留所にとっても初めての試み。</span>
+        <span lang="en">Bottled to celebrate Mickey Heads and his 13 years at the helm — an end-of-an-era edition, wholly matured in ex-rye casks. This mouthwatering last salute to Mickey is a first for the Distillery and a blunderbuss of fruity flavours.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">EUREKA! <span class="ja">エウレカ (2025)</span></div>
+        <div class="price">¥3,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">52.2% · Committee 2025 · 25th Anniversary</div>
+      <div class="desc">
+        <span lang="ja">刺激的で、オイリーでスパイシー。濃厚な糖蜜の香りが包み込むクレオソートとスモークされたハーブの奥に、トーストされたりんごとレーズンの甘い香り。加水でユーカリとメントールが勢いよく現れ、フェンネルとパインが続く。味わいは驚くほどバランスが取れ、ジリジリとした口当たりからピートスモーク、粗挽きコーヒー、カラントへ。甘いレモンバルサムがスモークされたマンダリンと絡み合い、鋭くスモーキーで刺激的な味わいが続く。余韻はベヒルのように長く蛇行し、バニラとスモークバターの繊細な香りを運んでくる。</span>
+        <span lang="en">Pungent, oily and spicy. Rich molasses wraps around creosote and smoked herbs, with toasted apple and raisin sweetness beneath. Add water for eucalyptus and menthol surging forward, followed by fennel and pine. Palate: remarkably balanced — a sizzling mouthfeel shifts to peat smoke, coarse-ground coffee and currants. Sweet lemon balm entwines with smoked mandarin, then sharp, smoky intensity. Finish: long and meandering like the Beithir, carrying delicate vanilla and smoked butter.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">BizarreBQ <span class="ja">ビザールBQ (2023)</span></div>
+        <div class="price">¥3,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">50.9% · 2023 Limited · BBQ Casks · DJ BBQ Collab</div>
+      <div class="desc">
+        <span lang="ja">木炭の煙や煤の香りが、スモーキーなハーブ＆スパイスと絡み合い、糖蜜のトフィー、ヒッコリー材で燻製したハム、シナモンをふりかけたエスプレッソが立ち昇る。加水でシャープな柑橘、フェンネル、アニスのハーブ香。味わいはアーティチョークのグリル、焼いた肉の背景に焚火とBBQの燃えさし。チリたっぷりのスペアリブのような生き生きとしたスパイス感、炎でグリルしたステーキ、チリオイル、なめし革、クローヴを深みと温かみのある煙が支える。生姜、アニス、タール、木を燃やした風味が舌の上で弾ける。余韻はアーティチョークのグリル、ブラックオリーブ、煤の力強い残響。</span>
+        <span lang="en">Nose: charcoal smoke and soot intertwine with smoky herbs &amp; spices, molasses toffee, hickory-smoked ham and cinnamon-dusted espresso. Add water for sharp citrus, fennel and anise. Palate: grilled artichoke and charred meat backed by bonfire embers — lively and spicy like chilli-loaded spare ribs. Flame-grilled steak, chilli oil, tanned leather and clove, supported by deep, warm smoke. Ginger, anise, tar and burning wood pop on the tongue. Finish: grilled artichoke, black olive and a powerful sooty aftertaste that lingers long.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="group-photo"><img src="assets/bottles/IMG_1690.jpg" alt="Ardbeg Anthology 13 and Fermutation"></div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Fermutation <span class="ja">ファーミュテーション (2024)</span></div>
+        <div class="price">¥5,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">49.4% · Committee 2022 · 13yo (Distilled 2007) · The Legend</div>
+      <div class="desc">
+        <span lang="ja">2007年11月、ボイラー故障で6基のウォッシュバックが危機に。Dr. Billは蓋を開け、液体を空気にさらすよう指示。空から舞い降りた小さな生き物たちがスピリッツに着地し、「ファーミュテーション」が始まった。アードベッグ史上最長の3週間発酵——この野性的でジンジーで生き生きとしたスピリッツが生まれた。まるでSFのようなドラムの中で、ピートとスモークがフレッシュでフローラルな味わいと美しく融合。シャープでモルティーなノートがファーミュテーションに唯一無二のアードベギャンな個性を与えている。</span>
+        <span lang="en">In November 2007, a broken boiler threatened six washbacks. Dr. Bill instructed the folk to throw open the lids and expose the liquid to air. Tiny beings descended from the sky — the "Fermutation" process had begun. An epic 3-week fermentation, the longest in Ardbeg's history, gave rise to this wild, zingy, vibrant spirit. In a dram that tastes like pure science fiction, peat and smoke meld beautifully with fresh, floral flavours, while sharp, malty notes give it a uniquely Ardbeggian profile.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ ANTHOLOGY ============ -->
+<section class="cat">
+  <div class="cat-head"><span class="icon">📚</span><h2>アンソロジーシリーズ</h2><span class="en">Anthology Series</span></div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Anthology 13yo "The Harpy's Tale" <span class="ja">アンソロジー 13年 ハーピーズ・テイル (2023)</span></div>
+        <div class="price">¥3,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">46% · 13yo · Anthology Chapter 1 · Ex-Bourbon &amp; Sauternes Casks</div>
+      <div class="desc">
+        <span lang="ja">アンソロジー第1章。バーボン樽とソーテルヌワイン樽で13年熟成。EVオリーブオイルのタッチを持つ独特のオイリーさ、甘いブライヤーウッド、コリアンダーやセージのアロマティックなハーブ。スモークしたレモンピールの穏やかな香り。加水でアマニ油とワックス感、クレームブリュレの余韻と石けんの香りが弾ける。味わいはソフトでオイリーな口当たり、濃厚な甘さからウッディな甘さへ。オークモス、アニス風味のトローチ、スモークしたアプリコット、ユーカリオイルが対照的な風味のパッチワークで調和。余韻は甘味とスモーク香が長く持続、クミン、カルダモン、ココナッツのほのかな香り。</span>
+        <span lang="en">Anthology Chapter 1. 13 years in bourbon and Sauternes wine casks. Distinctively oily with extra virgin olive oil, sweet briar wood, coriander &amp; sage. Smoked lemon peel; add water for linseed oil, waxiness, crème brûlée and a burst of soap. Palate: soft, oily — rich sweetness into aromatic woody sweetness, oak moss, anise lozenges, smoked apricot, eucalyptus oil in a patchwork of contrasting flavours. Finish: lingering sweetness and smoke, cumin, cardamom and a hint of coconut.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Anthology 14yo "The Unicorn's Tale" <span class="ja">アンソロジー 14年「ユニコーンの物語」(2024)</span></div>
+        <div class="price">¥3,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">46% · 14yo · Anthology Chapter 2 · Madeira &amp; Bourbon Casks · 🥇 SFWSC Double Gold</div>
+      <div class="desc">
+        <span lang="ja">アンソロジー第2章「ユニコーンの物語」。バーボン樽とマルムジー・マデイラワイン樽（最も甘く評価の高いマデイラ）のヴァッティング。濃厚で甘く、香り高くフルーティー——焼きたてバナナブレッドとシロップがかかったスポンジプディング。糖蜜の香りが焼けるシダーウッドに変化。加水でトロピカルフルーツの宝庫が解放、ユーカリオイルと柔らかな煙。味わいは瑞々しいライムと甘い桃が舌の上を駆け巡り、スモークフルーツと焼きたてパンがはじけ、薬用トローチ、クレオソート、アニスが踊る。モルトとナツメグとピート煙。余韻はマデイラ樽の影響がよく出た、奇妙なほど長いスモーキーな余韻——メンソール、クローブ、ウッドスモーク、カンフル。</span>
+        <span lang="en">Anthology Chapter 2 — "The Unicorn's Tale." Vatted from bourbon casks and the sweetest, most highly regarded Malmsey Madeira wine casks. Rich, sweet, aromatic and fruity — baked banana bread, syrupy sponge pudding, treacle turning to burning cedarwood. Add water for a bounty of tropical fruits, eucalyptus oil and soft smoke. Palate: zesty lime and sweet peach canter across; smoked fruit, fresh bread, medicinal lozenges, creosote and anise dance; soft malt with nutmeg and peat smoke. Finish: strikingly long and smoky — menthol, clove, woodsmoke and camphor.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="card-name">Anthology 15yo "The Beithir's Tale" <span class="ja">アンソロジー 15年「ベイサーの物語」(2025)</span></div>
+        <div class="price">¥3,000<small>/30ml</small></div>
+      </div>
+      <div class="meta">46% · 15yo · Anthology Chapter 3 (Final) · Designer Cask · 🥇 IWSC 98pts Gold Outstanding</div>
+      <div class="desc">
+        <span lang="ja">アンソロジー最終章「ベヒルズ・テール」。Dr. Billが自然乾燥させた樽を長時間トースト＆短時間チャーで仕上げた特別なデザイナーバーボンカスクで実験的に熟成。刺激的で、オイリーでスパイシー。濃厚な糖蜜が包み込むクレオソートとスモークされたハーブ、トーストりんごとレーズンの甘い香り。加水でユーカリとメントールが勢いよく現れ、フェンネルとパインが続く。味わいは驚くほどバランスが取れ、ジリジリとした口当たりからピートスモーク、粗挽きコーヒー、カラントへ。レモンバルサムとスモークマンダリンが絡み合う。余韻はこの物語のベヒルのように長く蛇行し、バニラとスモークバターの繊細な香りを運んでくる。</span>
+        <span lang="en">The final Anthology chapter — "The Beithir's Tale." Dr. Bill's experimental designer bourbon cask: air-dried, long-toasted, short-charred. Pungent, oily, spicy — rich molasses wraps creosote and smoked herbs, with toasted apple and raisin sweetness. Add water for eucalyptus and menthol surging, then fennel and pine. Palate: remarkably balanced — sizzling into peat smoke, coarse coffee and currants; lemon balm entwines with smoked mandarin. Finish: long and meandering like the Beithir of this tale, carrying delicate vanilla and smoked butter.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<p class="note">
+  <span lang="ja">※ 価格は1ショット（30ml）税込です。在庫状況により提供できない場合があります。</span>
+  <span lang="en">* Prices are per single shot (30ml), tax included. Subject to availability.</span>
+</p>
+
+<footer>
+  <div class="info">
+    <strong>ARdbEG &amp; Fruit Cocktail / イッテンヨンツボ</strong><br>
+    <span lang="ja">📍 恵比寿横丁</span>
+    <span lang="en">📍 Ebisu Yokocho, Tokyo</span><br>
+    <span lang="ja">🕐 金・土・祝前日 18:00–26:00 ／ 日・平日 18:00–25:00</span>
+    <span lang="en">🕐 Fri, Sat &amp; Eve of Holidays 18:00–2:00 / Sun &amp; Weekdays 18:00–1:00</span><br>
+    <span lang="ja">🍸 立ち飲み ／ チャージなし ／ No Cover Charge</span>
+    <span lang="en">🍸 Standing bar / No cover charge</span><br>
+    <a href="https://www.instagram.com/1.4tsubo/" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;font-size:14px">📸 @1.4tsubo</a>
+  </div>
+  <div style="margin-top:14px">
+    <span lang="ja" style="font-size:11px">※ こちらは限定アードベッグの専用メニューです。フルーツカクテル・シャンパン・ビール・サワー等は店内通常メニューをご覧ください。</span>
+    <span lang="en" style="font-size:11px">* This is the limited Ardbeg menu only. Please see the in-store menu for fruit cocktails, champagne, beer and sours.</span>
+  </div>
+  <div class="copy">© ARdbEG &amp; Fruit Cocktail イッテンヨンツボ 2026</div>
+</footer>
+
+<script>
+function setLang(l){
+  document.documentElement.setAttribute('data-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  document.getElementById('btn-ja').classList.toggle('active', l==='ja');
+  document.getElementById('btn-en').classList.toggle('active', l==='en');
+  try{localStorage.setItem('14tsubo-lang', l)}catch(e){}
+}
+(function(){
+  try{
+    var saved = localStorage.getItem('14tsubo-lang');
+    if(saved) setLang(saved);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
