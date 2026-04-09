@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#0a0f0a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#050805;
@@ -29,6 +29,11 @@
   html[data-lang="en"] .cat-head h2,
   html[data-lang="en"] .card-name,
   html[data-lang="en"] .price{font-family:"Noto Serif JP","Cormorant Garamond",serif}
+  html[data-lang="ko"] body{font-family:"Noto Serif KR","Cormorant Garamond",serif}
+  html[data-lang="ko"] h1.title,
+  html[data-lang="ko"] .cat-head h2,
+  html[data-lang="ko"] .card-name,
+  html[data-lang="ko"] .price{font-family:"Noto Serif KR","Cormorant Garamond",serif}
   a{color:var(--neon);text-decoration:none}
   body{background-image:radial-gradient(ellipse at top,rgba(61,245,138,.06),transparent 60%)}
   img{max-width:100%;display:block}
@@ -47,8 +52,11 @@
   .subtitle{color:var(--ink-dim);font-size:11px;letter-spacing:.3em;text-transform:uppercase;margin:0 0 18px}
   .lede{max-width:560px;margin:18px auto 0;color:var(--ink-dim);font-size:14px;line-height:1.85}
   .lede [lang="en"]{display:none}
+  .lede [lang="ko"]{display:none}
   html[data-lang="en"] .lede [lang="ja"]{display:none}
   html[data-lang="en"] .lede [lang="en"]{display:block}
+  html[data-lang="ko"] .lede [lang="ja"]{display:none}
+  html[data-lang="ko"] .lede [lang="ko"]{display:block}
 
   /* section */
   section.cat{max-width:var(--maxw);margin:0 auto;padding:48px 24px 8px}
@@ -75,8 +83,11 @@
   .meta{font-size:11px;color:var(--ink-dim);letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
   .desc{font-size:14px;line-height:1.85;color:var(--ink-dim)}
   .desc [lang="en"]{display:none}
+  .desc [lang="ko"]{display:none}
   html[data-lang="en"] .desc [lang="ja"]{display:none}
   html[data-lang="en"] .desc [lang="en"]{display:block}
+  html[data-lang="ko"] .desc [lang="ja"]{display:none}
+  html[data-lang="ko"] .desc [lang="ko"]{display:block}
 
   /* footer */
   footer{max-width:var(--maxw);margin:60px auto 0;padding:40px 24px 60px;text-align:center;border-top:1px solid var(--line);color:var(--ink-dim);font-size:12px;line-height:1.9;letter-spacing:.05em}
@@ -87,8 +98,21 @@
   /* misc */
   .note{font-size:11px;color:var(--ink-dim);text-align:center;margin-top:14px;letter-spacing:.05em}
   .note [lang="en"]{display:none}
+  .note [lang="ko"]{display:none}
   html[data-lang="en"] .note [lang="ja"]{display:none}
   html[data-lang="en"] .note [lang="en"]{display:block}
+  html[data-lang="ko"] .note [lang="ja"]{display:none}
+  html[data-lang="ko"] .note [lang="ko"]{display:block}
+
+  /* footer lang */
+  footer .info [lang="ko"]{display:none}
+  footer div [lang="ko"]{display:none}
+  html[data-lang="ko"] footer .info [lang="ja"]{display:none}
+  html[data-lang="ko"] footer .info [lang="en"]{display:none}
+  html[data-lang="ko"] footer .info [lang="ko"]{display:inline}
+  html[data-lang="ko"] footer div [lang="ja"]{display:none}
+  html[data-lang="ko"] footer div [lang="en"]{display:none}
+  html[data-lang="ko"] footer div [lang="ko"]{display:inline}
 </style>
 </head>
 <body>
@@ -96,6 +120,7 @@
 <div class="lang-bar">
   <button id="btn-ja" class="active" onclick="setLang('ja')">日本語</button>
   <button id="btn-en" onclick="setLang('en')">English</button>
+  <button id="btn-ko" onclick="setLang('ko')">한국어</button>
 </div>
 
 <header class="hero">
@@ -107,6 +132,7 @@
   <p class="lede">
     <span lang="ja">1.4坪のスモールバー「イッテンヨンツボ」が誇る、レア・アードベッグの全ラインナップ。コミッティリリース、アンソロジーシリーズ、アードベッグ・デー限定——アイラの雄が放つ全17銘柄をお楽しみください。</span>
     <span lang="en">The complete rare Ardbeg lineup at "Itten-Yon-Tsubo" (1.4-tsubo / ≈4.6㎡), a tiny bar specialising in Islay's most peated single malt. Committee Releases, the Anthology series and Ardbeg Day editions — 17 bottles to explore.</span>
+    <span lang="ko">1.4쯔보의 스몰 바 '잇텐욘쯔보'가 자랑하는 희귀 아드벡 풀 라인업. 커미티 릴리즈, 앤솔로지 시리즈, 아드벡 데이 한정판——아일라의 거장이 선보이는 17종을 즐겨보세요.</span>
   </p>
 </header>
 
@@ -124,6 +150,7 @@
       <div class="desc">
         <span lang="ja">香り高く、重厚でスモーキーかつスパイシー。クリーミーなトフィーに、タールやコーヒーかす、潮風のニュアンスが重なる奥行きのあるアロマ。加水でバニラやライムの軽やかさが立ち上がり、フェンネルや焚火の残り火のアードベッグらしい香りが際立つ。味わいは力強く厚みのある口当たり——燻製シナモン＆スパイスの甘味、煤、タール、ピートモス、薪の煙の濃密なスモーク。背景にモルト由来のやさしい甘みとビスケットの風味。余韻はメントールの清涼感、ユーカリを思わせる爽やかさが長く続く。</span>
         <span lang="en">Rich, heavy, smoky and spicy. Creamy toffee layered with tar, coffee grounds and sea breeze; add water for vanilla, lime, fennel and bonfire embers. Palate: powerful and full-bodied — smoked cinnamon &amp; spice sweetness, soot, tar, peat moss and woodsmoke. Gentle malt sweetness and biscuit in the background. Finish: menthol-like freshness, eucalyptus-tinged aftertaste that lingers long.</span>
+        <span lang="ko">향이 풍부하고 묵직하며 스모키하고 스파이시하다. 크리미한 토피에 타르, 커피 찌꺼기, 바닷바람의 뉘앙스가 겹겹이 어우러진 깊은 아로마. 가수하면 바닐라와 라임의 산뜻함이 피어나고, 펜넬과 모닥불 잔불의 아드벡다운 향이 두드러진다. 맛은 힘차고 풀바디한 입맛——훈제 시나몬 &amp; 스파이스의 단맛, 그을음, 타르, 피트모스, 장작 연기의 진한 스모크. 배경에 몰트 유래의 부드러운 단맛과 비스킷 풍미. 여운은 멘톨의 청량감, 유칼립투스를 연상시키는 상쾌함이 길게 이어진다.</span>
       </div>
     </div>
   </div>
@@ -144,6 +171,7 @@
       <div class="desc">
         <span lang="ja">刺激的で、オイリーでスパイシー。濃厚な糖蜜の香りが包み込むクレオソートとスモークされたハーブ、トーストされたりんごとレーズンの甘い香り。加水でユーカリとメントールが勢いよく現れ、フェンネルとパインが続く。味わいは驚くほどバランスが取れ、ジリジリとした口当たりからピートスモーク、粗挽きコーヒー、カラントへ。甘いレモンバルサムがスモークされたマンダリンと絡み合い、鋭くスモーキーで刺激的な味わいが続く。余韻は長く蛇行するように、バニラとスモークバターの繊細な香りを運んでくる。</span>
         <span lang="en">Pungent, oily and spicy. Rich molasses wraps around creosote and smoked herbs, with toasted apple and raisin sweetness beneath. Add water for eucalyptus and menthol surging forward, followed by fennel and pine. Palate: remarkably balanced — a sizzling mouthfeel shifts to peat smoke, coarse-ground coffee and currants. Sweet lemon balm entwines with smoked mandarin, followed by a sharp, smoky, pungent intensity. Finish: long and meandering, carrying delicate vanilla and smoked butter.</span>
+        <span lang="ko">자극적이고 오일리하며 스파이시하다. 진한 당밀 향이 크레오소트와 훈제 허브를 감싸고, 토스트한 사과와 건포도의 달콤함이 깔린다. 가수하면 유칼립투스와 멘톨이 힘차게 나타나고, 펜넬과 파인이 뒤따른다. 맛은 놀라울 정도로 균형 잡혀 있으며, 지글거리는 입맛에서 피트 스모크, 굵게 간 커피, 커런트로 이어진다. 달콤한 레몬밤이 훈제 만다린과 엮이며, 날카롭고 스모키하고 자극적인 맛이 계속된다. 여운은 길게 구불거리며 바닐라와 훈제 버터의 섬세한 향을 실어온다.</span>
       </div>
     </div>
   </div>
@@ -158,6 +186,7 @@
       <div class="desc">
         <span lang="ja">アードベッグ史上最もグルーヴィーな樽で造られた、強烈にメロウな一杯。スモークシナモン＆パプリカ、アンティークレザー、サドルソープ、松脂、タール、潮しぶき。加水でラベンダーソープ、白胡椒、コリアンダー＆ミント。味わいは力強い塩気からトリークルトフィー、バニラポップコーン、塩漬けピーチ、スモーキーBBQ——スモークドペア＆アップルのヘイズへ。余韻はスモークパプリカと焚き火のメロウな甘さ。</span>
         <span lang="en">An intensely mellow dram from the grooviest casks ever. Nose: smoked cinnamon &amp; paprika, antique leather, saddle soap, pine resin, tar, briny sea spray; add water for lavender soap, white pepper, coriander &amp; mint. Palate: powerfully salty, drifting into treacle toffee, vanilla popcorn, salted peaches, smoky BBQ — fading into a haze of smoked pears &amp; apples. Finish: smoked paprika, bonfires and mellow sweetness.</span>
+        <span lang="ko">아드벡 역사상 가장 그루비한 캐스크로 만든 강렬하면서도 부드러운 한 잔. 훈제 시나몬 &amp; 파프리카, 앤티크 레더, 새들 소프, 송진, 타르, 바다 물보라. 가수하면 라벤더 솝, 흰 후추, 코리앤더 &amp; 민트. 맛은 강력한 짠맛에서 트리클 토피, 바닐라 팝콘, 절인 복숭아, 스모키 BBQ——훈제 배 &amp; 사과의 연무로 이어진다. 여운은 훈제 파프리카와 모닥불의 부드러운 단맛.</span>
       </div>
     </div>
   </div>
@@ -172,6 +201,7 @@
       <div class="desc">
         <span lang="ja">バーボン樽で熟成したアードベッグをアメリカ産エクス・ラム樽でレスティング。芳しい松脂、薪煙、潮しぶきが熟したバナナ＆パイナップルと絶妙なパラディドル（連打）で踊る。ラベンダー、リコリス、バニラがリッチなダークチョコレートへと揺れ動き、長くスモーキーなフィニッシュへとパレードしていく。</span>
         <span lang="en">Ardbeg from ex-bourbon casks rested in ex-rum casks from the Americas. Fragrant pine resin, woodsmoke and sea spray dance alongside ripe banana and pineapple in a wondrous paradiddle of aromas. Lavender, liquorice and vanilla sway into rich dark chocolate, before parading into a long, smoky finish.</span>
+        <span lang="ko">버번 캐스크 숙성 아드벡을 아메리카산 럼 캐스크에서 레스팅. 향긋한 송진, 장작 연기, 바다 물보라가 잘 익은 바나나 &amp; 파인애플과 함께 놀라운 아로마의 연타로 춤춘다. 라벤더, 리코리스, 바닐라가 풍부한 다크 초콜릿으로 흘러가며, 길고 스모키한 피니시로 이어진다.</span>
       </div>
     </div>
   </div>
@@ -186,6 +216,7 @@
       <div class="desc">
         <span lang="ja">ダンネージ第3倉庫に棲むというアードベッグの火を吐くドラゴンの伝説から生まれた、壮大なスケールの一杯。最も強烈にチャーしたエクス・バーボン樽で熟成。煤と煙の強烈なアロマが待ち構え、グリル料理とブラックリコリスが大胆な薬用トローチの風味と絡み合う。まさにファンタスティカルなプロポーションのドラム。</span>
         <span lang="en">A dram of fantastical proportions, born from the tale of Ardbeg's flavour-breathing dragon dwelling in Dunnage Warehouse 3. Matured in our most heavily charred ex-bourbon casks. Intense aromas of soot and smoke lie in wait, while grilled fare and black liquorice mingle with bold notes of antiseptic lozenge. Truly fantastical.</span>
+        <span lang="ko">던니지 제3 창고에 산다는 아드벡의 불을 뿜는 드래곤 전설에서 탄생한 웅장한 한 잔. 가장 강렬하게 차르한 버번 캐스크에서 숙성. 그을음과 연기의 강렬한 아로마가 기다리고, 그릴 요리와 블랙 리코리스가 대담한 약용 트로치 풍미와 어우러진다. 그야말로 환상적인 프로포션의 드람.</span>
       </div>
     </div>
   </div>
@@ -202,6 +233,7 @@
       <div class="desc">
         <span lang="ja">アイラの白壁の中にひときわ異彩を放つ黒い羊——アードベッグ。その忠実なる群れ「アードベギャン」に捧げるコミッティ20周年記念ボトル。ニュージーランド産最高級ピノノワール・ワイン樽で熟成。ヴェルヴェットのようなサマーフルーツプディングとビターチェリーが、煤とアードベッグの真骨頂であるスモークのダークなエッジと編み合わさる。まさに唯一無二のウイスキー。</span>
         <span lang="en">Among Islay's whitewashed walls stands a black sheep — Ardbeg. This whisky celebrates our dyed-in-the-wool Ardbeggian flock. The finest Pinot Noir wine casks from New Zealand mature a celebratory dram that knits together velvety summer fruit pudding and bitter cherry, with a darker edge of soot and Ardbeg's hallmark smoke. Truly a whisky apart.</span>
+        <span lang="ko">아일라의 하얀 벽 사이에 유독 이채를 뿜는 검은 양——아드벡. 충실한 '아드베기안'들에게 바치는 커미티 20주년 기념 보틀. 뉴질랜드 최고급 피노 누아르 와인 캐스크에서 숙성. 벨벳 같은 서머 프루트 푸딩과 비터 체리가, 그을음과 아드벡 특유의 스모크의 어두운 엣지와 짜여진다. 그야말로 독보적인 위스키.</span>
       </div>
     </div>
   </div>
@@ -216,6 +248,7 @@
       <div class="desc">
         <span lang="ja">力強いオイリーなピートの香り、ダークチョコレート、燻製魚、かすかな海草、シャープなハーブが絡まり合い、黒胡椒の香りが波のように押し寄せる。味わいは胡椒が口の中で広がり、蜂蜜のトフィー、トルココーヒー、燻製ベーコン、ダークチョコレートが存在感を強める。桃のような果実味、ヒッコリーウッド、クローヴ油、黒オリーブが続く。余韻はクローヴやタール、豊かなトフィーが深く、深く、続く。</span>
         <span lang="en">Powerful oily peat, dark chocolate, smoked fish, subtle seaweed and sharp herbs intertwine on the nose, with waves of black pepper crashing in. Palate: pepper spreads across the mouth, then honey toffee, Turkish coffee, smoked bacon and rich dark chocolate build in presence. Peach-like fruit, hickory wood, clove oil and a hint of black olive follow. Finish: clove, tar and rich toffee linger deep, deep, and deeper still.</span>
+        <span lang="ko">힘찬 오일리한 피트 향, 다크 초콜릿, 훈제 생선, 은은한 해초, 샤프한 허브가 뒤엉키고, 흑후추 향이 파도처럼 밀려온다. 맛은 후추가 입안 가득 퍼지고, 꿀 토피, 터키시 커피, 훈제 베이컨, 다크 초콜릿이 존재감을 키운다. 복숭아 같은 과일미, 히코리 우드, 정향 오일, 블랙 올리브가 이어진다. 여운은 정향과 타르, 풍부한 토피가 깊고, 깊고, 더 깊이 이어진다.</span>
       </div>
     </div>
   </div>
@@ -230,6 +263,7 @@
       <div class="desc">
         <span lang="ja">史上最もダークなアードベッグ。このウイスキーをしっかり隠しておけ——その心臓部はダークシェリー樽で熟成され、トリークルトフィー、コールタール、イカスミ麺、焙煎コーヒーかすの波を押し寄せる。色合いは月明かりに照らされた銅のスチルのよう。香りはダークチョコ、リッチなトリークルトフィー、遠くの焚き火。バーボン樽熟成とダークシェリー樽の秘密の邂逅。胡椒のスパイスとゼスティなライムに誘われ、燻炭とウッドポリッシュが舌の上を走り、レーズン、デーツ、ジンジャーがタリー・クレオソートの影から現れる。燻製ハムとイカスミ麺の余韻が長くスパイシーなアフターテイストを告げる。</span>
         <span lang="en">The darkest Ardbeg ever. Take this whisky and hide it well — its heart matured in dark sherry casks, imparting waves of treacle toffee, coal tar, squid ink noodles and toasted coffee grounds. Colour: copper stills in moonlight. Nose: dark chocolate, rich treacle toffee and distant bonfires — a clandestine meeting of ex-bourbon and dark sherry casks. Pepper spice and zesty lime lure you in. Smouldering charcoal and wood polish flit across the palate, with raisins, dates and ginger emerging from shadows of tarry creosote. Cured smoked ham and squid ink noodles signal a long, spicy aftertaste.</span>
+        <span lang="ko">역사상 가장 다크한 아드벡. 이 위스키를 잘 숨겨두라——그 심장부는 다크 셰리 캐스크에서 숙성되어, 트리클 토피, 콜타르, 오징어 먹물 면, 볶은 커피 찌꺼기의 파도를 몰아친다. 다크 초콜릿, 리치한 트리클 토피, 먼 모닥불 향. 버번 캐스크와 다크 셰리 캐스크의 은밀한 조우. 후추 스파이스와 제스티한 라임에 이끌려, 숯불과 우드 폴리시가 혀 위를 달리고, 건포도, 대추야자, 생강이 크레오소트의 그림자에서 나타난다. 훈제 햄과 오징어 먹물 면의 여운이 길고 스파이시한 애프터를 전한다.</span>
       </div>
     </div>
   </div>
@@ -244,6 +278,7 @@
       <div class="desc">
         <span lang="ja">アードベッグ史上初、ピュリファイアー（精留器）を外して蒸留した"無敵のアードベッグ"。力強く刺激的なアロマ——農場の香り、クレオソート、タールを塗ったロープ。圧倒的なスモーク香の中に微かなダークチョコレートの甘さ。加水でダークチョコのクリームと燻製アーティチョーク。味わいはスパイシーで温かみのある口当たり——炭塵、カルダモン、ペパーミント、ユーカリ、ダークチョコ、コーヒーの粉。その裏にアニスツイスト、シナモンボール、薬用トローチのハードキャンディー。余韻は麻酔にかかったようなセンセーショナルで力強い残響がいつまでも続く。</span>
         <span lang="en">The first Ardbeg distilled without the purifier — "the invincible Ardbeg." Nose: powerful, pungent — farmyard, creosote, tarred rope; overwhelming smoke with a whisper of dark chocolate. Add water for dark chocolate cream and smoked artichoke. Palate: spicy and warm — coal dust, cardamom, peppermint, eucalyptus, dark chocolate, coffee grounds; behind it, anise twist, cinnamon balls and medicinal hard candy. Finish: an anaesthetic, sensational, powerful aftertaste that goes on and on.</span>
+        <span lang="ko">아드벡 역사상 최초로 퓨리파이어(정류기)를 제거하고 증류한 '무적의 아드벡'. 강렬하고 자극적인 아로마——농장 냄새, 크레오소트, 타르 칠한 로프. 압도적인 스모크 향 속에 은은한 다크 초콜릿. 가수하면 다크 초코 크림과 훈제 아티초크. 맛은 스파이시하고 따뜻한 입맛——석탄 먼지, 카다멈, 페퍼민트, 유칼립투스, 다크 초콜릿, 커피 가루. 그 뒤에 아니스 트위스트, 시나몬 볼, 약용 하드캔디. 여운은 마취에 걸린 듯 센세이셔널하고 강력한 잔향이 끝없이 이어진다.</span>
       </div>
     </div>
   </div>
@@ -258,6 +293,7 @@
       <div class="desc">
         <span lang="ja">極限までローストしたブラックモルトで造られた、パンクなアードベッグ。このモルトこそが唯一無二の個性を決定づける。「トゲトゲのボールを噛んだような味」と評されるほどの衝撃。チャコールとスウィートスモークのインパクト抜群な香り、力強いアニスシードとダークチョコレート。心臓を袖に縫い付けて見せる——ただし、その心臓は真っ黒。最もアードコアなファンだけに捧げる一杯。</span>
         <span lang="en">From a distillery with more ups and downs than a pogoing punk. Created with black malt roasted to the extreme — the malt defines its distinctive profile. Described as tasting like "biting on a spiky ball." Nose: charcoal and sweet smoke, right in your face. Palate: potent aniseed and dark chocolate stamp this out as one fit only for the most Ardcore of fans. It wears its heart on its sleeve… its black heart!</span>
+        <span lang="ko">극한까지 로스트한 블랙 몰트로 만든 펑크한 아드벡. 이 몰트야말로 독보적인 개성을 결정짓는다. '가시 달린 공을 깨무는 맛'이라고 평가될 정도의 충격. 차콜과 스위트 스모크의 임팩트 넘치는 향, 강렬한 아니스 시드와 다크 초콜릿. 심장을 소매에 꿰매어 보여주지만——그 심장은 새까맣다. 가장 아드코어한 팬에게만 바치는 한 잔.</span>
       </div>
     </div>
   </div>
@@ -274,6 +310,7 @@
       <div class="desc">
         <span lang="ja">13年間蒸留所の舵を取った Mickey Heads を讃えて生まれた「時代の終わり」エディション。アードベッグ史上初、全量エクス・ライ樽のみで熟成。Mickeyへの最後の敬礼は、フルーティーな味わいのラッパ銃（ブランダーバス）。蒸留所にとっても初めての試み。</span>
         <span lang="en">Bottled to celebrate Mickey Heads and his 13 years at the helm — an end-of-an-era edition, wholly matured in ex-rye casks. This mouthwatering last salute to Mickey is a first for the Distillery and a blunderbuss of fruity flavours.</span>
+        <span lang="ko">13년간 증류소의 키를 잡은 Mickey Heads를 기리며 탄생한 '시대의 끝' 에디션. 아드벡 역사상 최초로 전량 라이 캐스크에서만 숙성. Mickey에 대한 마지막 경례는 과일 풍미의 블런더버스(나팔총). 증류소에게도 처음 있는 시도.</span>
       </div>
     </div>
   </div>
@@ -288,6 +325,7 @@
       <div class="desc">
         <span lang="ja">刺激的で、オイリーでスパイシー。濃厚な糖蜜の香りが包み込むクレオソートとスモークされたハーブの奥に、トーストされたりんごとレーズンの甘い香り。加水でユーカリとメントールが勢いよく現れ、フェンネルとパインが続く。味わいは驚くほどバランスが取れ、ジリジリとした口当たりからピートスモーク、粗挽きコーヒー、カラントへ。甘いレモンバルサムがスモークされたマンダリンと絡み合い、鋭くスモーキーで刺激的な味わいが続く。余韻はベヒルのように長く蛇行し、バニラとスモークバターの繊細な香りを運んでくる。</span>
         <span lang="en">Pungent, oily and spicy. Rich molasses wraps around creosote and smoked herbs, with toasted apple and raisin sweetness beneath. Add water for eucalyptus and menthol surging forward, followed by fennel and pine. Palate: remarkably balanced — a sizzling mouthfeel shifts to peat smoke, coarse-ground coffee and currants. Sweet lemon balm entwines with smoked mandarin, then sharp, smoky intensity. Finish: long and meandering like the Beithir, carrying delicate vanilla and smoked butter.</span>
+        <span lang="ko">자극적이고 오일리하며 스파이시하다. 진한 당밀 향이 크레오소트와 훈제 허브를 감싸고, 토스트한 사과와 건포도의 달콤함이 깔린다. 가수하면 유칼립투스와 멘톨이 힘차게 나타나고, 펜넬과 파인이 뒤따른다. 맛은 놀라울 정도로 균형 잡혀 있으며, 지글거리는 입맛에서 피트 스모크, 굵게 간 커피, 커런트로. 달콤한 레몬밤이 훈제 만다린과 엮이며, 날카롭고 스모키한 강렬함. 여운은 베히르처럼 길게 구불거리며 바닐라와 훈제 버터의 섬세한 향을 실어온다.</span>
       </div>
     </div>
   </div>
@@ -302,6 +340,7 @@
       <div class="desc">
         <span lang="ja">木炭の煙や煤の香りが、スモーキーなハーブ＆スパイスと絡み合い、糖蜜のトフィー、ヒッコリー材で燻製したハム、シナモンをふりかけたエスプレッソが立ち昇る。加水でシャープな柑橘、フェンネル、アニスのハーブ香。味わいはアーティチョークのグリル、焼いた肉の背景に焚火とBBQの燃えさし。チリたっぷりのスペアリブのような生き生きとしたスパイス感、炎でグリルしたステーキ、チリオイル、なめし革、クローヴを深みと温かみのある煙が支える。生姜、アニス、タール、木を燃やした風味が舌の上で弾ける。余韻はアーティチョークのグリル、ブラックオリーブ、煤の力強い残響。</span>
         <span lang="en">Nose: charcoal smoke and soot intertwine with smoky herbs &amp; spices, molasses toffee, hickory-smoked ham and cinnamon-dusted espresso. Add water for sharp citrus, fennel and anise. Palate: grilled artichoke and charred meat backed by bonfire embers — lively and spicy like chilli-loaded spare ribs. Flame-grilled steak, chilli oil, tanned leather and clove, supported by deep, warm smoke. Ginger, anise, tar and burning wood pop on the tongue. Finish: grilled artichoke, black olive and a powerful sooty aftertaste that lingers long.</span>
+        <span lang="ko">목탄 연기와 그을음이 스모키한 허브 &amp; 스파이스, 당밀 토피, 히코리 훈제 햄, 시나몬 뿌린 에스프레소와 뒤엉킨다. 가수하면 샤프한 시트러스, 펜넬, 아니스. 맛은 그릴드 아티초크와 숯불 고기, 모닥불 잔불이 배경. 칠리 가득한 스페어립처럼 생생한 스파이스감, 화염 그릴 스테이크, 칠리 오일, 무두질 가죽, 정향을 깊고 따뜻한 스모크가 받쳐준다. 생강, 아니스, 타르, 나무 타는 풍미가 혀 위에서 튀어오른다. 여운은 그릴드 아티초크, 블랙 올리브, 강렬한 그을음의 잔향.</span>
       </div>
     </div>
   </div>
@@ -318,6 +357,7 @@
       <div class="desc">
         <span lang="ja">2007年11月、ボイラー故障で6基のウォッシュバックが危機に。Dr. Billは蓋を開け、液体を空気にさらすよう指示。空から舞い降りた小さな生き物たちがスピリッツに着地し、「ファーミュテーション」が始まった。アードベッグ史上最長の3週間発酵——この野性的でジンジーで生き生きとしたスピリッツが生まれた。まるでSFのようなドラムの中で、ピートとスモークがフレッシュでフローラルな味わいと美しく融合。シャープでモルティーなノートがファーミュテーションに唯一無二のアードベギャンな個性を与えている。</span>
         <span lang="en">In November 2007, a broken boiler threatened six washbacks. Dr. Bill instructed the folk to throw open the lids and expose the liquid to air. Tiny beings descended from the sky — the "Fermutation" process had begun. An epic 3-week fermentation, the longest in Ardbeg's history, gave rise to this wild, zingy, vibrant spirit. In a dram that tastes like pure science fiction, peat and smoke meld beautifully with fresh, floral flavours, while sharp, malty notes give it a uniquely Ardbeggian profile.</span>
+        <span lang="ko">2007년 11월, 보일러 고장으로 6기의 워시백이 위기에 처했다. Dr. Bill은 뚜껑을 열고 액체를 공기에 노출시키라 지시했다. 하늘에서 작은 존재들이 내려와 스피릿에 착지——'퍼뮤테이션' 과정이 시작되었다. 아드벡 역사상 최장인 3주간 발효에서 이 야생적이고 짜릿하고 생생한 스피릿이 탄생했다. 순수한 SF 같은 이 드람에서 피트와 스모크가 프레시하고 플로럴한 풍미와 아름답게 융합. 샤프하고 몰티한 노트가 유일무이한 아드베기안의 개성을 부여한다.</span>
       </div>
     </div>
   </div>
@@ -338,6 +378,7 @@
       <div class="desc">
         <span lang="ja">アンソロジー第1章。バーボン樽とソーテルヌワイン樽で13年熟成。EVオリーブオイルのタッチを持つ独特のオイリーさ、甘いブライヤーウッド、コリアンダーやセージのアロマティックなハーブ。スモークしたレモンピールの穏やかな香り。加水でアマニ油とワックス感、クレームブリュレの余韻と石けんの香りが弾ける。味わいはソフトでオイリーな口当たり、濃厚な甘さからウッディな甘さへ。オークモス、アニス風味のトローチ、スモークしたアプリコット、ユーカリオイルが対照的な風味のパッチワークで調和。余韻は甘味とスモーク香が長く持続、クミン、カルダモン、ココナッツのほのかな香り。</span>
         <span lang="en">Anthology Chapter 1. 13 years in bourbon and Sauternes wine casks. Distinctively oily with extra virgin olive oil, sweet briar wood, coriander &amp; sage. Smoked lemon peel; add water for linseed oil, waxiness, crème brûlée and a burst of soap. Palate: soft, oily — rich sweetness into aromatic woody sweetness, oak moss, anise lozenges, smoked apricot, eucalyptus oil in a patchwork of contrasting flavours. Finish: lingering sweetness and smoke, cumin, cardamom and a hint of coconut.</span>
+        <span lang="ko">앤솔로지 제1장. 버번 캐스크와 소테른 와인 캐스크에서 13년 숙성. EV 올리브 오일의 독특한 오일리함, 달콤한 브라이어 우드, 코리앤더 &amp; 세이지의 아로마틱 허브. 훈제 레몬 필. 가수하면 아마인유와 왁스감, 크렘 브륄레와 비누 향이 터진다. 맛은 소프트하고 오일리한 입맛에서 진한 단맛, 우디한 단맛으로. 오크 모스, 아니스 트로치, 훈제 살구, 유칼립투스 오일이 대조적 풍미의 패치워크로 조화. 여운은 단맛과 스모크가 길게 지속, 커민, 카다멈, 은은한 코코넛.</span>
       </div>
     </div>
   </div>
@@ -352,6 +393,7 @@
       <div class="desc">
         <span lang="ja">アンソロジー第2章「ユニコーンの物語」。バーボン樽とマルムジー・マデイラワイン樽（最も甘く評価の高いマデイラ）のヴァッティング。濃厚で甘く、香り高くフルーティー——焼きたてバナナブレッドとシロップがかかったスポンジプディング。糖蜜の香りが焼けるシダーウッドに変化。加水でトロピカルフルーツの宝庫が解放、ユーカリオイルと柔らかな煙。味わいは瑞々しいライムと甘い桃が舌の上を駆け巡り、スモークフルーツと焼きたてパンがはじけ、薬用トローチ、クレオソート、アニスが踊る。モルトとナツメグとピート煙。余韻はマデイラ樽の影響がよく出た、奇妙なほど長いスモーキーな余韻——メンソール、クローブ、ウッドスモーク、カンフル。</span>
         <span lang="en">Anthology Chapter 2 — "The Unicorn's Tale." Vatted from bourbon casks and the sweetest, most highly regarded Malmsey Madeira wine casks. Rich, sweet, aromatic and fruity — baked banana bread, syrupy sponge pudding, treacle turning to burning cedarwood. Add water for a bounty of tropical fruits, eucalyptus oil and soft smoke. Palate: zesty lime and sweet peach canter across; smoked fruit, fresh bread, medicinal lozenges, creosote and anise dance; soft malt with nutmeg and peat smoke. Finish: strikingly long and smoky — menthol, clove, woodsmoke and camphor.</span>
+        <span lang="ko">앤솔로지 제2장 '유니콘의 이야기'. 버번 캐스크와 가장 달고 높이 평가받는 말름지 마데이라 와인 캐스크의 배팅. 진하고 달콤하며 향기롭고 과일향——갓 구운 바나나 브레드와 시럽 스펀지 푸딩, 당밀에서 타는 시더우드로 변화. 가수하면 열대 과일의 보고, 유칼립투스 오일, 부드러운 스모크. 맛은 싱그러운 라임과 달콤한 복숭아가 혀 위를 질주하고, 훈제 과일과 갓 구운 빵이 튀어 오르며, 약용 트로치, 크레오소트, 아니스가 춤춘다. 몰트와 넛메그와 피트 스모크. 여운은 마데이라 캐스크의 영향이 잘 나타난, 놀랍도록 긴 스모키한 여운——멘솔, 정향, 우드스모크, 장뇌.</span>
       </div>
     </div>
   </div>
@@ -366,6 +408,7 @@
       <div class="desc">
         <span lang="ja">アンソロジー最終章「ベヒルズ・テール」。Dr. Billが自然乾燥させた樽を長時間トースト＆短時間チャーで仕上げた特別なデザイナーバーボンカスクで実験的に熟成。刺激的で、オイリーでスパイシー。濃厚な糖蜜が包み込むクレオソートとスモークされたハーブ、トーストりんごとレーズンの甘い香り。加水でユーカリとメントールが勢いよく現れ、フェンネルとパインが続く。味わいは驚くほどバランスが取れ、ジリジリとした口当たりからピートスモーク、粗挽きコーヒー、カラントへ。レモンバルサムとスモークマンダリンが絡み合う。余韻はこの物語のベヒルのように長く蛇行し、バニラとスモークバターの繊細な香りを運んでくる。</span>
         <span lang="en">The final Anthology chapter — "The Beithir's Tale." Dr. Bill's experimental designer bourbon cask: air-dried, long-toasted, short-charred. Pungent, oily, spicy — rich molasses wraps creosote and smoked herbs, with toasted apple and raisin sweetness. Add water for eucalyptus and menthol surging, then fennel and pine. Palate: remarkably balanced — sizzling into peat smoke, coarse coffee and currants; lemon balm entwines with smoked mandarin. Finish: long and meandering like the Beithir of this tale, carrying delicate vanilla and smoked butter.</span>
+        <span lang="ko">앤솔로지 최종장 '베히르의 이야기'. Dr. Bill이 자연 건조시킨 캐스크를 장시간 토스트 &amp; 단시간 차르로 마감한 특별 디자이너 버번 캐스크에서 실험적 숙성. 자극적이고 오일리하며 스파이시하다. 진한 당밀이 크레오소트와 훈제 허브를 감싸고, 토스트 사과와 건포도의 단맛. 가수하면 유칼립투스와 멘톨, 펜넬과 파인. 맛은 놀라울 정도로 균형 잡혀 있으며, 지글거리는 입맛에서 피트 스모크, 굵게 간 커피, 커런트로. 레몬밤과 훈제 만다린이 엮인다. 여운은 이 이야기의 베히르처럼 길게 구불거리며, 바닐라와 훈제 버터의 섬세한 향을 실어온다.</span>
       </div>
     </div>
   </div>
@@ -374,22 +417,27 @@
 <p class="note">
   <span lang="ja">※ 価格は1ショット（30ml）税込です。在庫状況により提供できない場合があります。</span>
   <span lang="en">* Prices are per single shot (30ml), tax included. Subject to availability.</span>
+  <span lang="ko">※ 가격은 1샷(30ml) 세금 포함입니다. 재고 상황에 따라 제공되지 않을 수 있습니다.</span>
 </p>
 
 <footer>
   <div class="info">
     <strong>ARdbEG &amp; Fruit Cocktail / イッテンヨンツボ</strong><br>
     <span lang="ja">📍 恵比寿横丁</span>
-    <span lang="en">📍 Ebisu Yokocho, Tokyo</span><br>
+    <span lang="en">📍 Ebisu Yokocho, Tokyo</span>
+    <span lang="ko">📍 에비스 요코초, 도쿄</span><br>
     <span lang="ja">🕐 金・土・祝前日 20:00–26:00 ／ 日・平日 20:00–25:00</span>
-    <span lang="en">🕐 Fri, Sat &amp; Eve of Holidays 8PM–2AM / Sun &amp; Weekdays 8PM–1AM</span><br>
+    <span lang="en">🕐 Fri, Sat &amp; Eve of Holidays 8PM–2AM / Sun &amp; Weekdays 8PM–1AM</span>
+    <span lang="ko">🕐 금·토·공휴일 전날 오후8시–새벽2시 / 일·평일 오후8시–새벽1시</span><br>
     <span lang="ja">🍸 立ち飲み ／ チャージなし ／ No Cover Charge</span>
-    <span lang="en">🍸 Standing bar / No cover charge</span><br>
+    <span lang="en">🍸 Standing bar / No cover charge</span>
+    <span lang="ko">🍸 스탠딩 바 / 커버 차지 없음</span><br>
     <a href="https://www.instagram.com/1.4tsubo/" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;font-size:14px">📸 @1.4tsubo</a>
   </div>
   <div style="margin-top:14px">
     <span lang="ja" style="font-size:11px">※ こちらは限定アードベッグの専用メニューです。フルーツカクテル・シャンパン・ビール・サワー等は店内通常メニューをご覧ください。</span>
     <span lang="en" style="font-size:11px">* This is the limited Ardbeg menu only. Please see the in-store menu for fruit cocktails, champagne, beer and sours.</span>
+    <span lang="ko" style="font-size:11px">※ 이것은 한정 아드벡 전용 메뉴입니다. 프루츠 칵테일·샴페인·맥주·사워 등은 매장 메뉴를 참조해 주세요.</span>
   </div>
   <div class="copy">© ARdbEG &amp; Fruit Cocktail イッテンヨンツボ 2026</div>
 </footer>
@@ -400,6 +448,7 @@ function setLang(l){
   document.documentElement.setAttribute('lang', l);
   document.getElementById('btn-ja').classList.toggle('active', l==='ja');
   document.getElementById('btn-en').classList.toggle('active', l==='en');
+  document.getElementById('btn-ko').classList.toggle('active', l==='ko');
   try{localStorage.setItem('14tsubo-lang', l)}catch(e){}
 }
 (function(){
